@@ -4,6 +4,8 @@ import (
 	"time"
 
 	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model"
+	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/category"
+	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/comment"
 	"github.com/google/uuid"
 )
 
@@ -44,4 +46,20 @@ type Todo struct {
 	CategoryID   *uuid.UUID `json:"categoryId" db:"category_id"`
 	Metadata     *Metadata  `json:"metadata" db:"metadata"`
 	SortOrder    int        `json:"sortOrder" db:"sort_order"`
+}
+
+type PopulatedTodo struct {
+	Todo
+	Category *category.Category `json:"category" db:"category"`
+	Children []Todo             `json:"children" db:"children"`
+	Comments []comment.Comment  `json:"comments" db:"comments"`
+}
+
+type TodoStats struct {
+	Total     int `json:"total"`
+	Draft     int `json:"draft"`
+	Active    int `json:"active"`
+	Completed int `json:"completed"`
+	Archived  int `json:"archived"`
+	Overdue   int `json:"overdue"`
 }
