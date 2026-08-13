@@ -1,6 +1,9 @@
 package category
 
-import "github.com/go-playground/validator/v10"
+import (
+	"github.com/go-playground/validator/v10"
+	"github.com/google/uuid"
+)
 
 type CreateCategoryPayload struct {
 	Name        string  `json:"name" validate:"required,min=1,max=100"`
@@ -14,10 +17,10 @@ func (p *CreateCategoryPayload) Validate() error {
 }
 
 type UpdateCategoryPayload struct {
-	ID          string  `json:"id" validate:"required,uuid"`
-	Name        *string `json:"name" validate:"omitempty,min=1,max=100"`
-	Color       *string `json:"color" validate:"omitempty,hexcolor"`
-	Description *string `json:"description" validate:"omitempty,max=255"`
+	ID          uuid.UUID `json:"id" validate:"required,uuid"`
+	Name        *string   `json:"name" validate:"omitempty,min=1,max=100"`
+	Color       *string   `json:"color" validate:"omitempty,hexcolor"`
+	Description *string   `json:"description" validate:"omitempty,max=255"`
 }
 
 func (p *UpdateCategoryPayload) Validate() error {
@@ -59,4 +62,13 @@ func (q *GetCategoriesQuery) Validate() error {
 	}
 
 	return nil
+}
+
+type DeleteCategoryPayload struct {
+	ID uuid.UUID `json:"id" validate:"required,uuid"`
+}
+
+func (p *DeleteCategoryPayload) Validate() error {
+	validate := validator.New()
+	return validate.Struct(p)
 }
