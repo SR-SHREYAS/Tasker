@@ -1,8 +1,8 @@
 CREATE TABLE todo_categories (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    created_at TIMESTAMP(3) WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP(3) WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
     user_id TEXT NOT NULL,
     name TEXT NOT NULL,
     color TEXT DEFAULT '#6b7280',
@@ -19,9 +19,9 @@ CREATE TRIGGER set_updated_at_todo_categories
 
 CREATE TABLE todos (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
     user_id TEXT NOT NULL,
     title TEXT NOT NULL,
     description TEXT,
@@ -30,7 +30,7 @@ CREATE TABLE todos (
     due_date TIMESTAMPTZ,
     completed_at TIMESTAMPTZ,
     parent_todo_id UUID REFERENCES todos,
-    category_id UUID REFERENCES todo_categories,
+    category_id UUID REFERENCES todo_categories ON DELETE SET NULL,
     metadata JSONB,
     sort_order SERIAL
 );
@@ -51,7 +51,7 @@ CREATE TABLE todo_comments (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     created_at TIMESTAMP(3) WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP(3) WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
+    
     todo_id UUID NOT NULL REFERENCES todos ON DELETE CASCADE,
     user_id TEXT NOT NULL,
     content TEXT NOT NULL
@@ -65,12 +65,12 @@ CREATE TRIGGER set_updated_at_todo_comments
     FOR EACH ROW
     EXECUTE FUNCTION trigger_set_updated_at();
 
--- Constraints --
-ALTER TABLE todos
-ADD CONSTRAINT no_self_parent
+-- Constraints
+ALTER TABLE todos 
+ADD CONSTRAINT no_self_parent 
 CHECK (id != parent_todo_id);
 
--- Index for hierarchical queries 
+-- Index for hierarchical queries
 CREATE INDEX idx_todos_hierarchy ON todos(parent_todo_id, sort_order);
 
 -- Composite index for user todos with status and priority

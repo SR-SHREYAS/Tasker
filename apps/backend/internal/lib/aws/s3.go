@@ -26,7 +26,7 @@ func NewS3Client(s *server.Server, cfg aws.Config) *S3Client {
 }
 
 func (s *S3Client) UploadFile(ctx context.Context, bucket string, fileName string, file io.Reader) (string, error) {
-	fileKey := fmt.Sprintf("%s_%s", fileName, time.Now().Unix())
+	fileKey := fmt.Sprintf("%s_%d", fileName, time.Now().Unix())
 
 	var buffer bytes.Buffer
 	_, err := io.Copy(&buffer, file)

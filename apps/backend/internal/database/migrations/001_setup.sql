@@ -1,6 +1,3 @@
--- Write your migrate up statements here
-
--- to transform a row field to camel case jsonb when fetching it --
 CREATE OR REPLACE FUNCTION camel(input_row anyelement)
     RETURNS jsonb
     LANGUAGE plpgsql
@@ -9,11 +6,11 @@ DECLARE
     result jsonb := '{}';
     rec record;
 BEGIN
-    FOR rec IN 
-    SELECT 
-        lower(substring(regexp_replace(initcap(regexp_replace(key,'_',' ','g')),'\s','','g'), 1, 1)) || substring(regexp_replace(initcap(regexp_replace(key,'_',' ','g')),'\s',' ','g'), 2) AS camel_key,
+    FOR rec IN
+    SELECT
+        lower(substring(regexp_replace(initcap(regexp_replace(key, '_', ' ', 'g')), '\s', '', 'g'), 1, 1)) || substring(regexp_replace(initcap(regexp_replace(key, '_', ' ', 'g')), '\s', '', 'g'), 2) AS camel_key,
         value
-    FROM 
+    FROM
         jsonb_each(to_jsonb(input_row))
         LOOP
             result := result || jsonb_build_object(rec.camel_key, rec.value);
@@ -30,8 +27,3 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
-
----- create above / drop below ----
-
--- Write your migrate down statements here. If this migration is irreversible
--- Then delete the separator line above.
