@@ -19,7 +19,7 @@ func registerTodoRoutes(r *echo.Group, h *handler.TodoHandler, ch *handler.Comme
 	// Individual todo operations
 	dynamicTodo := todos.Group("/:id")
 	dynamicTodo.GET("", h.GetTodoByID)
-	dynamicTodo.PUT("", h.UpdateTodo)
+	dynamicTodo.PATCH("", h.UpdateTodo)
 	dynamicTodo.DELETE("", h.DeleteTodo)
 
 	// Todo comments
