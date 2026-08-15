@@ -1,6 +1,6 @@
 package category
 
-import "github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model"
+import "github.com/SR-SHREYAS/Tasker/internal/model"
 
 type Category struct {
 	model.Base

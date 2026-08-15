@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/middleware"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/comment"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/repository"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/middleware"
+	"github.com/SR-SHREYAS/Tasker/internal/model/comment"
+	"github.com/SR-SHREYAS/Tasker/internal/repository"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"
 )

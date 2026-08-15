@@ -8,14 +8,14 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/database"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/handler"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/logger"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/repository"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/router"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/service"
+	"github.com/SR-SHREYAS/Tasker/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/database"
+	"github.com/SR-SHREYAS/Tasker/internal/handler"
+	"github.com/SR-SHREYAS/Tasker/internal/logger"
+	"github.com/SR-SHREYAS/Tasker/internal/repository"
+	"github.com/SR-SHREYAS/Tasker/internal/router"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/service"
 )
 
 const DefaultContextTimeout = 30

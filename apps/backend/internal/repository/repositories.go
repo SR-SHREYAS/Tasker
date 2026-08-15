@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+import "github.com/SR-SHREYAS/Tasker/internal/server"
 
 type Repositories struct {
 	Todo     *TodoRepository

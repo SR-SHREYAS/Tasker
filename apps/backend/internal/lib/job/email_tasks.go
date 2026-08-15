@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/todo"
+	"github.com/SR-SHREYAS/Tasker/internal/model/todo"
 	"github.com/google/uuid"
 	"github.com/hibiken/asynq"
 )

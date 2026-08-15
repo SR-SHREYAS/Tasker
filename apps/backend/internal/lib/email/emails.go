@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/todo"
+	"github.com/SR-SHREYAS/Tasker/internal/model/todo"
 	"github.com/google/uuid"
 )
 
@@ -15,7 +15,7 @@ func (c *Client) SendWelcomeEmail(to, firstName string) error {
 
 	return c.SendEmail(
 		to,
-		"Welcome to Boilerplate!",
+		"Welcome to tasker!",
 		TemplateWelcome,
 		data,
 	)

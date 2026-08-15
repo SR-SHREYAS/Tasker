@@ -103,7 +103,10 @@ export function TodoCreateForm({ children }: TodoCreateFormProps) {
           title: data.title,
           description: data.description || undefined,
           priority: data.priority,
-          categoryId: data.categoryId || undefined,
+          categoryId:
+            data.categoryId && data.categoryId !== "none"
+              ? data.categoryId
+              : null,
           dueDate: data.dueDate?.toISOString(),
         },
       });

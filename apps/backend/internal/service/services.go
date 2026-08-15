@@ -3,10 +3,10 @@ package service
 import (
 	"fmt"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/lib/aws"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/lib/job"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/repository"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/lib/aws"
+	"github.com/SR-SHREYAS/Tasker/internal/lib/job"
+	"github.com/SR-SHREYAS/Tasker/internal/repository"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 )
 
 type Services struct {

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/category"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/model"
+	"github.com/SR-SHREYAS/Tasker/internal/model/category"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 )

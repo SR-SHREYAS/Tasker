@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/service"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/service"
 )
 
 type Handlers struct {

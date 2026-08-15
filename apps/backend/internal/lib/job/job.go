@@ -3,8 +3,8 @@ package job
 import (
 	"context"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/lib/email"
+	"github.com/SR-SHREYAS/Tasker/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/lib/email"
 	"github.com/hibiken/asynq"
 	"github.com/rs/zerolog"
 )

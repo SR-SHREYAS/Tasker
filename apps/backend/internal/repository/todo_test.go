@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/todo"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/repository"
-	testing_pkg "github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/testing"
+	"github.com/SR-SHREYAS/Tasker/internal/model/todo"
+	"github.com/SR-SHREYAS/Tasker/internal/repository"
+	testing_pkg "github.com/SR-SHREYAS/Tasker/internal/testing"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

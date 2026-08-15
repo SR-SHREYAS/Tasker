@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/database"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/logger"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/repository"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/database"
+	"github.com/SR-SHREYAS/Tasker/internal/logger"
+	"github.com/SR-SHREYAS/Tasker/internal/repository"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 	"github.com/hibiken/asynq"
 	"github.com/redis/go-redis/v9"
 )

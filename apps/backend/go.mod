@@ -1,4 +1,4 @@
-module github.com/SR-SHREYAS/Go-Custom-Boilerplate
+module github.com/SR-SHREYAS/Tasker
 
 go 1.24.5
 
