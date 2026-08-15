@@ -127,7 +127,10 @@ export function TodoEditForm({ todo, children }: TodoEditFormProps) {
           description: data.description || undefined,
           status: data.status,
           priority: data.priority,
-          categoryId: data.categoryId || undefined,
+          categoryId:
+            data.categoryId && data.categoryId !== "none"
+              ? data.categoryId
+              : null,
           dueDate: data.dueDate?.toISOString(),
         },
       });
