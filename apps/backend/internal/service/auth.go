@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 
 	"github.com/clerk/clerk-sdk-go/v2"
 	clerkUsers "github.com/clerk/clerk-sdk-go/v2/user"

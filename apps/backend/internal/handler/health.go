@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/middleware"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/middleware"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 
 	"github.com/labstack/echo/v4"
 )

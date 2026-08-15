@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/comment"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/model/comment"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 )

@@ -3,9 +3,9 @@ package todo
 import (
 	"time"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/category"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model/comment"
+	"github.com/SR-SHREYAS/Tasker/internal/model"
+	"github.com/SR-SHREYAS/Tasker/internal/model/category"
+	"github.com/SR-SHREYAS/Tasker/internal/model/comment"
 	"github.com/google/uuid"
 )
 

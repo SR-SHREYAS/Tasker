@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/cron"
+	"github.com/SR-SHREYAS/Tasker/internal/cron"
 	"github.com/spf13/cobra"
 )
 

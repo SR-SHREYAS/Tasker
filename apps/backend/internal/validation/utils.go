@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/errs"
+	"github.com/SR-SHREYAS/Tasker/internal/errs"
 	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
 )

@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/config"
 
 	"github.com/jackc/pgx/v5"
 	tern "github.com/jackc/tern/v2/migrate"

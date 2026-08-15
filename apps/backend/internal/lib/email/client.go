@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"html/template"
 
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/config"
 	"github.com/pkg/errors"
 	"github.com/resend/resend-go/v2"
 	"github.com/rs/zerolog"

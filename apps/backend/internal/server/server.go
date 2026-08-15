@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/SR-SHREYAS/Tasker/internal/config"
+	"github.com/SR-SHREYAS/Tasker/internal/database"
+	"github.com/SR-SHREYAS/Tasker/internal/lib/job"
+	loggerPkg "github.com/SR-SHREYAS/Tasker/internal/logger"
 	"github.com/newrelic/go-agent/v3/integrations/nrredis-v9"
 	"github.com/redis/go-redis/v9"
 	"github.com/rs/zerolog"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/config"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/database"
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/lib/job"
-	loggerPkg "github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/logger"
 )
 
 type Server struct {

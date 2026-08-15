@@ -1,7 +1,7 @@
 package comment
 
 import (
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/model"
+	"github.com/SR-SHREYAS/Tasker/internal/model"
 	"github.com/google/uuid"
 )
 

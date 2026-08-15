@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/handler"
+	"github.com/SR-SHREYAS/Tasker/internal/handler"
 
 	"github.com/labstack/echo/v4"
 )

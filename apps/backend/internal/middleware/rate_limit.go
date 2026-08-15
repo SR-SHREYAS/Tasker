@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/SR-SHREYAS/Go-Custom-Boilerplate/internal/server"
+	"github.com/SR-SHREYAS/Tasker/internal/server"
 )
 
 type RateLimitMiddleware struct {
